@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- ImageView untuk gambar celengan -->
+    <ImageView
+        android:id="@+id/imageViewCelengan"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/placeholder_image"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- TextView untuk nama celengan -->
+    <TextView
+        android:id="@+id/textViewNamaCelengan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Celengan"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@id/imageViewCelengan"
+        app:layout_constraintTop_toTopOf="@id/imageViewCelengan"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- TextView untuk harga celengan -->
+    <TextView
+        android:id="@+id/textViewHargaCelengan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Harga Celengan"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewCelengan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewCelengan"
+        app:layout_constraintTop_toBottomOf="@id/textViewNamaCelengan"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <!-- TextView untuk jumlah terkumpul -->
+    <TextView
+        android:id="@+id/textViewJumlahTerkumpul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terkumpul: "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/imageViewCelengan"
+        app:layout_constraintTop_toBottomOf="@id/textViewHargaCelengan"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
